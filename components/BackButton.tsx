@@ -1,5 +1,6 @@
 "use client"
 
+import { Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -9,7 +10,7 @@ interface BackButtonProps {
   className?: string
 }
 
-export default function BackButton({ defaultPath = "/", className = "" }: BackButtonProps) {
+function BackButtonContent({ defaultPath = "/", className = "" }: BackButtonProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -58,5 +59,18 @@ export default function BackButton({ defaultPath = "/", className = "" }: BackBu
       <ArrowLeft className="w-4 h-4" />
       {getBackLabel()}
     </Button>
+  )
+}
+
+export default function BackButton(props: BackButtonProps) {
+  return (
+    <Suspense fallback={
+      <Button variant="ghost" className={`flex items-center gap-2 hover:bg-gray-100 ${props.className}`}>
+        <ArrowLeft className="w-4 h-4" />
+        Volver
+      </Button>
+    }>
+      <BackButtonContent {...props} />
+    </Suspense>
   )
 }
