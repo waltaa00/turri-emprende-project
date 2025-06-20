@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowLeft, MapPin, Phone, Instagram, Facebook, MessageCircle, Star, Heart } from "lucide-react"
+import { ArrowLeft, MapPin, Phone, Instagram, Facebook, MessageCircle, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -35,38 +35,22 @@ interface Props {
 
 export default function EmprendimientoDetail({ emprendimiento }: Props) {
   const [isVisible, setIsVisible] = useState(false)
-  const [isFavorite, setIsFavorite] = useState(false)
 
   useEffect(() => {
     setIsVisible(true)
   }, [])
 
-  const handleFavoriteToggle = () => {
-    setIsFavorite(!isFavorite)
-    // Here you would typically save to localStorage or send to API
-  }
-
   return (
     <div className="max-w-7xl mx-auto px-4 py-6">
       {/* Header with back button */}
       <div
-        className={`flex items-center justify-between mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
+        className={`flex items-center mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
       >
         <Button variant="ghost" asChild className="flex items-center gap-2 hover:bg-gray-100">
           <Link href="/catalogo">
             <ArrowLeft className="w-4 h-4" />
             Volver al Catálogo
           </Link>
-        </Button>
-
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={handleFavoriteToggle}
-          className={`transition-colors duration-300 ${isFavorite ? "text-red-500 hover:text-red-600" : "text-gray-400 hover:text-red-500"}`}
-          aria-label={isFavorite ? "Quitar de favoritos" : "Agregar a favoritos"}
-        >
-          <Heart className={`w-5 h-5 ${isFavorite ? "fill-current" : ""}`} />
         </Button>
       </div>
 
