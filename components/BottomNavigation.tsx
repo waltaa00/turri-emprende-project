@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Home, Search, User } from "lucide-react"
+import { Home, Search } from "lucide-react"
 
 const links = [
   {
@@ -14,11 +14,6 @@ const links = [
     href: "/catalogo",
     label: "Catálogo",
     icon: Search,
-  },
-  {
-    href: "/perfil",
-    label: "Perfil",
-    icon: User,
   },
 ]
 
