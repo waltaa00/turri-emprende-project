@@ -1,0 +1,181 @@
+{
+  "emprendimientos": [
+    {
+      "id": "quesos-la-colina",
+      "nombre": "Quesos La Colina",
+      "descripcion": "Queso artesanal hecho en Santa Cruz",
+      "categoria": "Lácteos",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437413/LaColina1_qf9hod.png",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437413/LaColina4_mzqivc.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina3_t9wvrm.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina2_biojdx.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina5_qu8taf.png"
+      ],
+      "historia": "Fundado en el 2024 por un joven turrialbeño, quien decidió comenzar a vender quesos hechos artesanalmente en Santa Cruz de Turrialba. Actualmente, venden quesos en San José y Turrialba.",
+      "productos": [
+        "Queso con Especies",
+        "Queso Turrialba",
+        "Queso Mozzarella",
+        "Queso Maduro",
+        "Queso Palmito",
+        "Queso Semiduro"
+      ],
+      "servicios": ["Queso contra pedido", "Entrega a domicilio"],
+      "redes_sociales": {
+        "instagram": "@_delacolina",
+        "facebook": "Quesos La Colina",
+        "whatsapp": "+506 85283249"
+      },
+      "ubicacion": "Turrialba (sin tienda física)",
+      "telefono": "+506 8528-3249",
+      "nombre_contacto": "Quesos La Colina",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "kanel",
+      "nombre": "Detalles Kanél",
+      "descripcion": "Venta de artículos de bisutería y accesorios",
+      "categoria": "Accesorios",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439557/IMG_7391_qz8qcy.jpg",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439558/IMG_7393_u86dqr.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439558/IMG_7392_bduh3n.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439557/IMG_7394_iee2rl.jpg"
+      ],
+      "historia": "Kanél es un emprendimiento de bisutería y accesorios para mujer, creado por una joven turrialbeña en el año 2021. Lo que comenzó como solo un kiosko de venta en Plaza Rojitas, Turrialba centro, se ha convertido en una tienda reconocida en el entorno virtual. Actualmente realiza gran parte de sus ventas mediante redes sociales.",
+      "productos": ["Brazaletes", "Collares", "Anillos", "Aretes", "Cadenas", "Pulseras", "Relojes", "Accesorios y más"],
+      "servicios": [
+        "Envío a domicilio"
+      ],
+      "redes_sociales": {
+        "instagram": "@detalleskanel",
+        "facebook": "Detalles Kanél",
+        "whatsapp": "+506 8729-3434"
+      },
+      "ubicacion": "Plaza Rojitas, Turrialba",
+      "telefono": "+506 8729-3434",
+      "nombre_contacto": "Detalles Kanél",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "walta-audiovisual",
+      "nombre": "Walta Audiovisual",
+      "descripcion": "Servicio de fotografía y video",
+      "categoria": "Servicios",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440461/IMG_7400_jbjvjn.jpg",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440463/IMG_7402_yglraa.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440462/IMG_7396_rhghcs.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440462/IMG_7401_odinsp.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440461/IMG_7399_qfovkc.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440460/IMG_7397_goyb69.jpg"
+      ],
+      "historia": "Walta Audiovisual nació con la idea de brindar servicios de fotografía y video aéreo a negocios de Turrialba. Actualmente, se dedica a hacer principalmente fotografía y videos para redes sociales, tanto en Turrialba como en el resto del país.",
+      "productos": ["Paquetes de fotgrafía para redes sociales", "Paquetes de video para redes sociales", "Paquetes de fotografía y video con dron"],
+      "servicios": ["Servicio de fotografía tradicional", "Servicio de video aéreo", "Servicio de fotografía aérea", "Servicio de video publicitario"],
+      "redes_sociales": {
+        "instagram": "@walta_audiovisual",
+        "facebook": "Walta Audiovisual",
+        "whatsapp": "+506 8316-5260"
+      },
+      "ubicacion": "Turrialba (sin local físico)",
+      "telefono": "+506 2558-9012",
+      "nombre_contacto": "Walter Sánchez",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "la-birrieria",
+      "nombre": "La Birrieria",
+      "descripcion": "Tacos de Birria y comida mexicana",
+      "categoria": "Gastronomía",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441217/IMG_7403_ynaqei.jpg",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441217/IMG_7404_vjplqe.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441216/IMG_7406_wwfxsv.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441215/IMG_7405_ahyioi.jpg",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441215/IMG_7407_ypz8sb.jpg"
+      ],
+      "historia": "Fundado en el 2021 como resultado de la pandemia, La Birriería comenzó vendiendo solamente Tacos de Birria. Actualmente, ofrece una gran variedad de platos inspirados en la cocina mexicana pero con un toque único.",
+      "productos": [
+        "Tacos de Birria",
+        "Hamburguesas",
+        "BirriaNachos",
+        "BurriBirria",
+        "Chicken Pizza Fries",
+        "QuesaSteak",
+        "Mucho más"
+      ],
+      "servicios": ["Envío a domicilio"],
+      "redes_sociales": {
+        "instagram": "@labirrieria__",
+        "facebook": "La Birrieria",
+        "whatsapp": "+506 7151-2453"
+      },
+      "ubicacion": "Turrialba (sin local físico)",
+      "telefono": "+506 7151-2453",
+      "nombre_contacto": "Kendall Rojas",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "authr",
+      "nombre": "Authr",
+      "descripcion": "Marca de ropa",
+      "categoria": "Ropa",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441839/authr1_tpolif.png",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441840/auth2_gaosn4.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441841/auth4_omqewd.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441841/auth3_ze1hyp.png"
+      ],
+      "historia": "Creada en 2024, Authr es una marca creada con la idea de que somos los autores de nuestra propia historia. Con una línea de ropa urbana de alta calidad, ha destacado por su innovadora propuesta.",
+      "productos": ["Hoodies", "Crewnecks"],
+      "servicios": ["Entrega a domicilio"],
+      "redes_sociales": {
+        "instagram": "@authr.co",
+        "facebook": "Authr CR",
+        "whatsapp": "+506 8671-8803"
+      },
+      "ubicacion": "Turrialba (sin local físico)",
+      "telefono": "+506 8671-8803",
+      "nombre_contacto": "José Ramírez",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    },
+    {
+      "id": "dolce-vita",
+      "nombre": "Dolce Vita",
+      "descripcion": "Venta de queques y repostería",
+      "categoria": "Gastronomía",
+      "imagen": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442610/dolce1_fch7h1.png",
+      "galeria": [
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442609/dolce2_tgnujx.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442607/dolce3_tbfasd.png",
+        "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442317/dolce4_sqyukt.png"
+      ],
+      "historia": "Creado desde 2020 durante la pandemia, Dolce Vita se dedica a la venta de queques, postres y repostería por encargo.",
+      "productos": ["Queques de cumpleaños", "Postres fríos", "Repostería salada y dulce", "Torta Chilena", "Tortas Frías", "Mucho más"],
+      "servicios": ["Envío a domicilio"],
+      "redes_sociales": {
+        "instagram": "@dolcevita_cr_",
+        "facebook": "Dolce Vita CR",
+        "whatsapp": "+506 8364-7151"
+      },
+      "ubicacion": "Turrialba (sin local físico)",
+      "telefono": "+506 8364-7151",
+      "nombre_contacto": "Miriam Brenes",
+      "aprobado": true,
+      "fecha_creacion": "2024-01-01T00:00:00Z",
+      "fecha_actualizacion": "2024-01-01T00:00:00Z"
+    }
+  ]
+}

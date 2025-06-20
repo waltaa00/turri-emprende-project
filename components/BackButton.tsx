@@ -1,0 +1,62 @@
+"use client"
+
+import { useRouter, useSearchParams } from "next/navigation"
+import { ArrowLeft } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
+interface BackButtonProps {
+  defaultPath?: string
+  className?: string
+}
+
+export default function BackButton({ defaultPath = "/", className = "" }: BackButtonProps) {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  const handleBack = () => {
+    const fromParam = searchParams.get("from")
+
+    if (fromParam) {
+      // Decodificar la URL de origen
+      const decodedPath = decodeURIComponent(fromParam)
+      router.push(decodedPath)
+    } else {
+      // Fallback al path por defecto
+      router.push(defaultPath)
+    }
+  }
+
+  const getBackLabel = () => {
+    const fromParam = searchParams.get("from")
+
+    if (fromParam) {
+      const decodedPath = decodeURIComponent(fromParam)
+
+      switch (decodedPath) {
+        case "/":
+          return "Volver al Inicio"
+        case "/catalogo":
+          return "Volver al Catálogo"
+        default:
+          if (decodedPath.startsWith("/emprendimiento/")) {
+            return "Volver al Emprendimiento"
+          }
+          return "Volver"
+      }
+    }
+
+    return "Volver al Inicio"
+  }
+
+  return (
+    <Button
+      variant="ghost"
+      onClick={handleBack}
+      className={`flex items-center gap-2 hover:bg-gray-100 ${className}`}
+      aria-label={getBackLabel()}
+    >
+      <ArrowLeft className="w-4 h-4" />
+      {getBackLabel()}
+    </Button>
+  )
+}
