@@ -92,7 +92,7 @@ export default function ImageGallery({ images, nombre }: Props) {
 
           {/* Botón cerrar */}
           <button
-            onClick={closeModal}
+              onClick={closeModal}
             className="absolute top-4 right-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
             aria-label="Cerrar visor"
           >
@@ -101,18 +101,18 @@ export default function ImageGallery({ images, nombre }: Props) {
 
           {/* Botones de navegación */}
           <button
-            onClick={prevImage}
+              onClick={prevImage}
             className="absolute left-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
-            aria-label="Imagen anterior"
-          >
+              aria-label="Imagen anterior"
+            >
             <ChevronLeft className="h-6 w-6" />
           </button>
 
           <button
-            onClick={nextImage}
+              onClick={nextImage}
             className="absolute right-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
-            aria-label="Siguiente imagen"
-          >
+              aria-label="Siguiente imagen"
+            >
             <ChevronRight className="h-6 w-6" />
           </button>
 

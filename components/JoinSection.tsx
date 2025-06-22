@@ -222,7 +222,7 @@ export default function JoinSection() {
         setIsSubmitted(true)
         setShowForm(false)
 
-        // Reset form después de 5 segundos
+        // Reset form después de 30 segundos
         setTimeout(() => {
           setIsSubmitted(false)
           setFormData({
@@ -242,7 +242,7 @@ export default function JoinSection() {
             imagenPrincipal: "",
             galeria: "",
           })
-        }, 5000)
+        }, 30000)
       } else {
         setErrors({ general: "Hubo un error al enviar tu solicitud. Por favor intenta de nuevo." })
       }
