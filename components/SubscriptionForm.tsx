@@ -60,7 +60,7 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
           setIsSubmitted(false)
           setEmail("")
           setNombre("")
-        }, 10000)
+        }, 1000000)
       } else {
         setErrors({ email: "Hubo un error al procesar tu suscripción. Intenta de nuevo." })
       }
