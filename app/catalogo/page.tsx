@@ -39,7 +39,11 @@ export default function CatalogoPage() {
         <header className="bg-white shadow-sm sticky top-0 z-10">
           <div className="max-w-7xl mx-auto px-4 py-6">
             <div className="flex items-center mb-2">
-              <Button variant="ghost" asChild className="flex items-center gap-2 hover:bg-gray-100">
+              <Button 
+                variant="ghost" 
+                asChild 
+                className="flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100"
+              >
                 <Link href="/">
                   <ArrowLeft className="w-4 h-4" />
                   Volver al Inicio

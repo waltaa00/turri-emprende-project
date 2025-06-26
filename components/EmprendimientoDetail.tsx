@@ -46,7 +46,11 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
       <div
         className={`flex items-center mb-6 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}`}
       >
-        <Button variant="ghost" asChild className="flex items-center gap-2 hover:bg-gray-100">
+        <Button 
+          variant="ghost" 
+          asChild 
+          className="flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100"
+        >
           <Link href="/catalogo">
             <ArrowLeft className="w-4 h-4" />
             Volver al Catálogo
@@ -62,7 +66,10 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
         <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-2xl overflow-hidden mb-6">
           <Image
             src={emprendimiento.imagen || "/placeholder.svg"}
-            alt={`Vista principal del emprendimiento ${emprendimiento.nombre} - ${emprendimiento.descripcion}`}
+            alt={emprendimiento.imagen 
+              ? `Imagen destacada del emprendimiento ${emprendimiento.nombre} - ${emprendimiento.categoria}. ${emprendimiento.descripcion}`
+              : `Imagen no disponible para el emprendimiento ${emprendimiento.nombre}`
+            }
             fill
             className="object-cover"
             priority

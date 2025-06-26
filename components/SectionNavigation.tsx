@@ -204,13 +204,13 @@ export default function SectionNavigation() {
                 <button
                   onClick={() => scrollToSection(section.id)}
                   onKeyDown={(e) => handleKeyDown(e, section.id)}
-                  className={`relative flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-teal-500 focus:ring-offset-1 border-0 bg-transparent p-0 ${
+                  className={`relative flex items-center justify-center transition-all duration-300 focus:outline-none focus:ring-1 focus:ring-teal-500 focus:ring-offset-1 border-0 p-0 ${
                     isMobile
                       ? `w-6 h-6 max-w-6 max-h-6 min-w-0 min-h-0 rounded-full ${isActive ? "scale-110" : "hover:scale-110 active:scale-95"}`
                       : `w-12 h-12 rounded-full ${
                           isActive
                             ? "bg-teal-600 text-white shadow-lg scale-110"
-                            : "bg-white/60 text-gray-600 hover:bg-white/80 hover:text-teal-600 hover:scale-105 active:scale-95"
+                            : "bg-white/90 text-gray-700 hover:bg-teal-50 hover:text-teal-600 hover:scale-105 active:scale-95 shadow-sm border border-gray-100"
                         }`
                   }`}
                   style={isMobile ? { width: "24px", height: "24px", maxWidth: "24px", maxHeight: "24px" } : {}}
