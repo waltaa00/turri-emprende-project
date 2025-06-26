@@ -66,7 +66,7 @@ export default function ImageGallery({ images, nombre }: Props) {
           >
             <Image
               src={image}
-              alt={`Fotografía ${index + 1} de ${nombre}`}
+              alt={`Fotografía detallada ${index + 1} del emprendimiento ${nombre} - Vista en miniatura`}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
@@ -128,7 +128,7 @@ export default function ImageGallery({ images, nombre }: Props) {
             <div className="relative w-full h-full max-w-4xl max-h-[80vh]" onClick={(e) => e.stopPropagation()}>
               <Image
                 src={images[selectedImage]}
-                alt={`Vista ampliada de ${nombre}`}
+                alt={`Fotografía detallada ${selectedImage + 1} del emprendimiento ${nombre} - Vista ampliada`}
                 fill
                 className="object-contain"
                 quality={100}

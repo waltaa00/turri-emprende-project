@@ -18,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={inter.className}>
+        <a href="#main-content" className="skip-link">
+          Saltar al contenido principal
+        </a>
         {/* Skip link for accessibility */}
         
         {children}

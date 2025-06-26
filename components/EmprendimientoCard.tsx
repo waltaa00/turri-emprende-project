@@ -34,7 +34,10 @@ export default function EmprendimientoCard({ emprendimiento }: Props) {
         <div className="aspect-[4/3] relative">
           <Image
             src={imageError ? "/placeholder.svg?height=300&width=400" : emprendimiento.imagen}
-            alt={`Imagen de ${emprendimiento.nombre}`}
+            alt={imageError 
+              ? `Imagen no disponible para ${emprendimiento.nombre}` 
+              : `Imagen principal del emprendimiento ${emprendimiento.nombre} - ${emprendimiento.categoria} en ${emprendimiento.ubicacion}`
+            }
             fill
             className={`object-cover transition-transform duration-500 ${isHovered ? "scale-110" : "scale-100"}`}
             onError={() => setImageError(true)}

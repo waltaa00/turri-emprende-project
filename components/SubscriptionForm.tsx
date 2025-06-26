@@ -76,8 +76,12 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
     return (
       <Card className="bg-white border border-gray-200 shadow-sm">
         <CardContent className="p-6 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4">
-            <CheckCircle className="w-8 h-8" />
+          <div 
+            className="inline-flex items-center justify-center w-16 h-16 bg-green-100 text-green-600 rounded-full mb-4"
+            role="status"
+            aria-live="polite"
+          >
+            <CheckCircle className="w-8 h-8" aria-hidden="true" />
           </div>
           <h3 className="text-lg font-semibold text-gray-900 mb-2">¡Suscripción Exitosa!</h3>
           <p className="text-gray-600">Te mantendremos informado sobre las novedades de {emprendimientoNombre}.</p>
@@ -90,7 +94,7 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
     <Card className="bg-white border border-gray-200 shadow-sm">
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-xl text-gray-900">
-          <Bell className="w-5 h-5 text-teal-600" />
+          <Bell className="w-5 h-5 text-teal-600" aria-hidden="true" />
           Recibe Novedades
         </CardTitle>
         <p className="text-gray-600 text-sm">
@@ -98,7 +102,12 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
         </p>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form 
+          onSubmit={handleSubmit} 
+          className="space-y-4"
+          aria-label={`Formulario de suscripción para ${emprendimientoNombre}`}
+          noValidate
+        >
           <div>
             <Label htmlFor="nombre" className="text-sm font-medium text-gray-700">
               Nombre completo
@@ -111,6 +120,8 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
               placeholder="Tu nombre completo"
               className={`mt-1 ${errors.nombre ? "border-red-300 focus:border-red-500" : "border-gray-300 focus:border-teal-500"}`}
               aria-describedby={errors.nombre ? "nombre-error" : undefined}
+              aria-invalid={errors.nombre ? "true" : "false"}
+              required
             />
             {errors.nombre && (
               <p id="nombre-error" className="text-red-600 text-sm mt-1" role="alert">
@@ -131,6 +142,8 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
               placeholder="tu@email.com"
               className={`mt-1 ${errors.email ? "border-red-300 focus:border-red-500" : "border-gray-300 focus:border-teal-500"}`}
               aria-describedby={errors.email ? "email-error" : undefined}
+              aria-invalid={errors.email ? "true" : "false"}
+              required
             />
             {errors.email && (
               <p id="email-error" className="text-red-600 text-sm mt-1" role="alert">
@@ -143,15 +156,19 @@ export default function SubscriptionForm({ emprendimientoNombre }: Props) {
             type="submit"
             className="w-full bg-teal-600 hover:bg-teal-700 transition-all duration-300 transform hover:scale-105"
             disabled={isSubmitting}
+            aria-busy={isSubmitting}
           >
             {isSubmitting ? (
-              <div className="flex items-center gap-2">
-                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+              <div className="flex items-center gap-2" role="status">
+                <div 
+                  className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"
+                  aria-label="Cargando"
+                />
                 Suscribiendo...
               </div>
             ) : (
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4" aria-hidden="true" />
                 Suscribirse
               </div>
             )}

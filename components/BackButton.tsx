@@ -53,7 +53,7 @@ function BackButtonContent({ defaultPath = "/", className = "" }: BackButtonProp
     <Button
       variant="ghost"
       onClick={handleBack}
-      className={`flex items-center gap-2 hover:bg-gray-100 ${className}`}
+      className={`flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100 ${className}`}
       aria-label={getBackLabel()}
     >
       <ArrowLeft className="w-4 h-4" />
@@ -65,7 +65,10 @@ function BackButtonContent({ defaultPath = "/", className = "" }: BackButtonProp
 export default function BackButton(props: BackButtonProps) {
   return (
     <Suspense fallback={
-      <Button variant="ghost" className={`flex items-center gap-2 hover:bg-gray-100 ${props.className}`}>
+      <Button 
+        variant="ghost" 
+        className={`flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100 ${props.className}`}
+      >
         <ArrowLeft className="w-4 h-4" />
         Volver
       </Button>
