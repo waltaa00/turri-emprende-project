@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronRight, Sparkles, ChevronDown } from "lucide-react"
+import { ChevronRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -21,6 +21,8 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
       onLearnMoreClick()
     }
   }
+
+  const buttonBaseStyles = "w-full sm:w-auto transition-all duration-300 transform hover:scale-105 shadow-lg touch-manipulation"
 
   return (
     <section
@@ -60,7 +62,7 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
             <Button
               asChild
               size="lg"
-              className="w-full sm:w-auto bg-white text-teal-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg touch-manipulation"
+              className={`${buttonBaseStyles} bg-white text-teal-700 hover:bg-gray-100`}
             >
               <Link href="/catalogo" className="flex items-center justify-center gap-2">
                 Explorar Catálogo
@@ -72,13 +74,10 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
               variant="outline"
               size="lg"
               onClick={handleLearnMore}
-              className="w-full sm:w-auto border-white/30 text-gray-900 bg-white/90 hover:bg-white backdrop-blur-sm transition-all duration-300 font-medium touch-manipulation"
+              className={`${buttonBaseStyles} border-white/30 text-gray-900 bg-white/90 hover:bg-white backdrop-blur-sm font-medium`}
               aria-label="Conocer más sobre emprendimiento en Turrialba"
             >
-              <span className="flex items-center justify-center gap-2">
-                Conoce Más
-                <ChevronDown className="w-4 h-4" />
-              </span>
+              Conoce Más
             </Button>
           </div>
         </div>
