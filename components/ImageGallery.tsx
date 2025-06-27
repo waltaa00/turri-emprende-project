@@ -7,136 +7,144 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface Props {
-  images: string[]
+  images: {
+    url: string
+    alt: string
+  }[]
   nombre: string
 }
 
 export default function ImageGallery({ images, nombre }: Props) {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null)
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [selectedImage, setSelectedImage] = useState(0)
+  const [isLoading, setIsLoading] = useState(true)
 
-  // Manejar el scroll lock de manera segura
   useEffect(() => {
-    if (selectedImage !== null) {
-      const originalStyle = window.getComputedStyle(document.body).overflow
+    if (isModalOpen) {
       document.body.style.overflow = "hidden"
-      return () => {
-        document.body.style.overflow = originalStyle
-      }
+    } else {
+      document.body.style.overflow = "unset"
     }
-  }, [selectedImage])
+
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [isModalOpen])
 
   const openModal = (index: number) => {
     setSelectedImage(index)
+    setIsModalOpen(true)
   }
 
   const closeModal = () => {
-    setSelectedImage(null)
+    setIsModalOpen(false)
   }
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation()
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % images.length)
-    }
+    setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1))
   }
 
   const prevImage = (e: React.MouseEvent) => {
     e.stopPropagation()
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1)
-    }
+    setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1))
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "Escape") closeModal()
-    if (e.key === "ArrowRight") nextImage(e as any)
-    if (e.key === "ArrowLeft") prevImage(e as any)
+    if (e.key === "ArrowRight") setSelectedImage((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    if (e.key === "ArrowLeft") setSelectedImage((prev) => (prev === 0 ? images.length - 1 : prev - 1))
   }
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [])
 
   return (
     <>
       {/* Grid de miniaturas */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <section className="grid grid-cols-2 md:grid-cols-3 gap-4" aria-label="Galería de imágenes">
         {images.map((image, index) => (
-          <button
+          <figure
             key={index}
             className="aspect-square relative rounded-lg overflow-hidden cursor-pointer group"
             onClick={() => openModal(index)}
+            role="button"
+            tabIndex={0}
+            onKeyDown={(e) => e.key === "Enter" && openModal(index)}
             aria-label={`Ver imagen ${index + 1} de ${nombre}`}
           >
             <Image
-              src={image}
-              alt={`Fotografía detallada ${index + 1} del emprendimiento ${nombre} - Vista en miniatura`}
+              src={image.url}
+              alt={image.alt}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
-            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-          </button>
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" aria-hidden="true" />
+          </figure>
         ))}
-      </div>
+      </section>
 
       {/* Modal */}
-      {selectedImage !== null && (
-        <div
-          className="fixed inset-0 z-50"
-          role="dialog"
+      {isModalOpen && (
+        <dialog
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+          onClick={closeModal}
+          open
           aria-modal="true"
-          aria-label="Visor de imagen"
-          onKeyDown={handleKeyDown}
+          aria-labelledby="modal-title"
         >
-          {/* Fondo con blur */}
-          <div 
-            className="absolute inset-0 bg-black/80 backdrop-blur-sm"
-            onClick={closeModal}
-          />
-
-          {/* Botón cerrar */}
-          <button
+          {/* Controles de navegación */}
+          <nav className="absolute inset-x-4 top-4 flex justify-between items-center" aria-label="Controles de galería">
+            <span className="text-white text-sm">
+              {selectedImage + 1} / {images.length}
+            </span>
+            <button
               onClick={closeModal}
-            className="absolute top-4 right-4 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
-            aria-label="Cerrar visor"
-          >
-            <X className="h-6 w-6" />
-          </button>
+              className="text-white hover:text-gray-300 transition-colors"
+              aria-label="Cerrar galería"
+            >
+              <X className="w-8 h-8" />
+            </button>
+          </nav>
 
-          {/* Botones de navegación */}
-          <button
+          {/* Navegación de imágenes */}
+          <div className="absolute inset-y-0 left-4 flex items-center">
+            <button
               onClick={prevImage}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
+              className="text-white hover:text-gray-300 transition-colors"
               aria-label="Imagen anterior"
             >
-            <ChevronLeft className="h-6 w-6" />
-          </button>
+              <ChevronLeft className="w-8 h-8" />
+            </button>
+          </div>
 
-          <button
+          <div className="absolute inset-y-0 right-4 flex items-center">
+            <button
               onClick={nextImage}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-50 rounded-full bg-black/50 p-2 text-white hover:bg-black/75 transition-colors"
+              className="text-white hover:text-gray-300 transition-colors"
               aria-label="Siguiente imagen"
             >
-            <ChevronRight className="h-6 w-6" />
-          </button>
-
-          {/* Contador de imágenes */}
-          <div className="absolute top-4 left-4 z-50">
-            <span className="bg-black/50 text-white px-4 py-2 rounded-full text-sm">
-              {selectedImage + 1} de {images.length}
-            </span>
+              <ChevronRight className="w-8 h-8" />
+            </button>
           </div>
 
-          {/* Contenedor de la imagen principal */}
-          <div className="absolute inset-0 flex items-center justify-center p-4">
-            <div className="relative w-full h-full max-w-4xl max-h-[80vh]" onClick={(e) => e.stopPropagation()}>
-              <Image
-                src={images[selectedImage]}
-                alt={`Fotografía detallada ${selectedImage + 1} del emprendimiento ${nombre} - Vista ampliada`}
-                fill
-                className="object-contain"
-                quality={100}
-                priority
-              />
-            </div>
-          </div>
-        </div>
+          {/* Contenedor de imagen */}
+          <figure 
+            className="relative w-full h-full max-w-4xl max-h-[80vh] p-4" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={images[selectedImage].url}
+              alt={images[selectedImage].alt}
+              fill
+              className="object-contain"
+              quality={100}
+              priority
+            />
+          </figure>
+        </dialog>
       )}
     </>
   )

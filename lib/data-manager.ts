@@ -6,8 +6,14 @@ export interface Emprendimiento {
   nombre: string
   descripcion: string
   categoria: string
-  imagen: string
-  galeria: string[]
+  imagen: {
+    url: string
+    alt: string
+  }
+  galeria: {
+    url: string
+    alt: string
+  }[]
   historia: string
   productos: string[]
   servicios: string[]
@@ -30,8 +36,14 @@ export interface SolicitudEmprendimiento {
   nombre: string
   descripcion: string
   categoria: string
-  imagen?: string
-  galeria?: string[]
+  imagen?: {
+    url: string
+    alt: string
+  }
+  galeria?: {
+    url: string
+    alt: string
+  }[]
   historia: string
   productos: string[]
   servicios?: string[]
@@ -108,8 +120,14 @@ export async function crearSolicitudEmprendimiento(datos: {
   telefono: string
   email: string
   nombre_contacto: string
-  imagen?: string
-  galeria?: string[]
+  imagen?: {
+    url: string
+    alt: string
+  }
+  galeria?: {
+    url: string
+    alt: string
+  }[]
   redes_sociales?: {
     instagram?: string
     facebook?: string
