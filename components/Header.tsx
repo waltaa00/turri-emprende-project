@@ -13,15 +13,16 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-teal-700/10 bg-teal-600 animate-fadeIn">
+    <header className="sticky top-0 z-50 w-full border-b border-teal-700/10 bg-gradient-to-br from-teal-500 via-teal-600 to-teal-700 animate-fadeIn">
+      <div className="absolute inset-0 bg-black/10"></div>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3"
+        className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3"
         aria-label="Global"
       >
-        <div className="flex flex-1">
+        <div className="flex flex-1 items-center gap-3">
           <Link 
             href="/" 
-            className="-m-1.5 p-1.5 transition-transform duration-200 hover:scale-105 active:scale-95"
+            className="-m-1.5 p-1.5 transition-transform duration-200 hover:scale-105 active:scale-95 flex items-center gap-3"
           >
             <span className="sr-only">TurriEmprende</span>
             <Image
@@ -32,6 +33,10 @@ export default function Header() {
               height={32}
               priority
             />
+            <span className="text-white font-semibold text-lg">
+              <span className="text-white">Turri</span>
+              <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Emprende</span>
+            </span>
           </Link>
         </div>
 
