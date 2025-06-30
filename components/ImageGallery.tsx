@@ -68,7 +68,7 @@ export default function ImageGallery({ images, nombre }: Props) {
         {images.map((image, index) => (
           <figure
             key={index}
-            className="aspect-square relative rounded-lg overflow-hidden cursor-pointer group"
+            className="aspect-square relative rounded-lg overflow-hidden cursor-pointer group touch-manipulation"
             onClick={() => openModal(index)}
             role="button"
             tabIndex={0}
@@ -79,6 +79,7 @@ export default function ImageGallery({ images, nombre }: Props) {
               src={image.url}
               alt={image.alt}
               fill
+              sizes="(max-width: 768px) 50vw, 33vw"
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" aria-hidden="true" />
@@ -88,21 +89,24 @@ export default function ImageGallery({ images, nombre }: Props) {
 
       {/* Modal */}
       {isModalOpen && (
-        <dialog
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center touch-none"
           onClick={closeModal}
-          open
+          role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"
         >
           {/* Controles de navegación */}
-          <nav className="absolute inset-x-4 top-4 flex justify-between items-center" aria-label="Controles de galería">
+          <nav className="absolute inset-x-4 top-4 flex justify-between items-center z-50" aria-label="Controles de galería">
             <span className="text-white text-sm">
               {selectedImage + 1} / {images.length}
             </span>
             <button
-              onClick={closeModal}
-              className="text-white hover:text-gray-300 transition-colors"
+              onClick={(e) => {
+                e.stopPropagation()
+                closeModal()
+              }}
+              className="text-white hover:text-gray-300 transition-colors p-2"
               aria-label="Cerrar galería"
             >
               <X className="w-8 h-8" />
@@ -110,41 +114,40 @@ export default function ImageGallery({ images, nombre }: Props) {
           </nav>
 
           {/* Navegación de imágenes */}
-          <div className="absolute inset-y-0 left-4 flex items-center">
-            <button
-              onClick={prevImage}
-              className="text-white hover:text-gray-300 transition-colors"
-              aria-label="Imagen anterior"
-            >
-              <ChevronLeft className="w-8 h-8" />
-            </button>
-          </div>
+          <button
+            onClick={prevImage}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors p-2 z-50"
+            aria-label="Imagen anterior"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
 
-          <div className="absolute inset-y-0 right-4 flex items-center">
-            <button
-              onClick={nextImage}
-              className="text-white hover:text-gray-300 transition-colors"
-              aria-label="Siguiente imagen"
-            >
-              <ChevronRight className="w-8 h-8" />
-            </button>
-          </div>
+          <button
+            onClick={nextImage}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 transition-colors p-2 z-50"
+            aria-label="Siguiente imagen"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
 
           {/* Contenedor de imagen */}
-          <figure 
-            className="relative w-full h-full max-w-4xl max-h-[80vh] p-4" 
+          <div 
+            className="relative w-full h-full flex items-center justify-center p-4" 
             onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={images[selectedImage].url}
-              alt={images[selectedImage].alt}
-              fill
-              className="object-contain"
-              quality={100}
-              priority
-            />
-          </figure>
-        </dialog>
+            <div className="relative w-full h-full max-w-4xl max-h-[80vh]">
+              <Image
+                src={images[selectedImage].url}
+                alt={images[selectedImage].alt}
+                fill
+                className="object-contain"
+                quality={100}
+                priority
+                sizes="100vw"
+              />
+            </div>
+          </div>
+        </div>
       )}
     </>
   )
