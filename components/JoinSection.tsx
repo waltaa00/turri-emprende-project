@@ -260,7 +260,11 @@ export default function JoinSection() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 text-green-600 rounded-full mb-6">
-              <CheckCircle className="w-10 h-10" />
+              <CheckCircle 
+                className="w-10 h-10" 
+                aria-label="Ícono de verificación que indica que la solicitud fue enviada exitosamente"
+                role="img"
+              />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¡Solicitud Enviada Exitosamente!</h2>
             <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -293,7 +297,11 @@ export default function JoinSection() {
           >
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <Rocket className="w-4 h-4 text-yellow-300" />
+                <Rocket 
+                  className="w-4 h-4 text-yellow-300" 
+                  aria-label="Ícono de cohete que representa el inicio de tu emprendimiento en TurriEmprende"
+                  role="img"
+                />
                 <span className="text-sm font-medium text-white">Únete a Nuestra Comunidad</span>
               </div>
 
@@ -318,7 +326,11 @@ export default function JoinSection() {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl mb-4">
-                    <benefit.icon className="w-8 h-8 text-white" />
+                    <benefit.icon 
+                      className="w-8 h-8 text-white" 
+                      aria-label={`Ícono de ${benefit.title.toLowerCase()}: ${benefit.description} que acompaña el texto de ${benefit.title}`}
+                      role="img"
+                    />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-teal-100">{benefit.description}</p>
@@ -355,7 +367,8 @@ export default function JoinSection() {
                 size="lg"
                 className="bg-white text-teal-700 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg touch-manipulation"
               >
-                <Heart className="w-5 h-5 mr-2" />
+                <Heart className="w-5 h-5 mr-2" 
+                aria-label="Ícono decorativo en forma de corazón que acompaña el texto del botón Registrar Mi Emprendimiento"/>
                 Registrar Mi Emprendimiento
               </Button>
               <p className="text-teal-100 mt-4 text-sm">Es gratis y solo toma 5 minutos</p>
@@ -378,7 +391,11 @@ export default function JoinSection() {
                 {errors.general && (
                   <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
                     <p className="text-red-800 flex items-center gap-2">
-                      <AlertCircle className="w-4 h-4" />
+                      <AlertCircle 
+                        className="w-4 h-4" 
+                        aria-label="Ícono de alerta que indica un error en el formulario"
+                        role="img"
+                      />
                       {errors.general}
                     </p>
                   </div>
@@ -404,7 +421,11 @@ export default function JoinSection() {
                         />
                         {errors.nombre && (
                           <p id="nombre-error" className="text-red-600 text-sm mt-1 flex items-center gap-1">
-                            <AlertCircle className="w-4 h-4" />
+                            <AlertCircle 
+                              className="w-4 h-4" 
+                              aria-label="Ícono de alerta que indica un error en el campo de nombre"
+                              role="img"
+                            />
                             {errors.nombre}
                           </p>
                         )}
@@ -453,7 +474,8 @@ export default function JoinSection() {
                       <div className="flex justify-between items-center mt-1">
                         {errors.descripcion && (
                           <p className="text-red-600 text-sm flex items-center gap-1">
-                            <AlertCircle className="w-4 h-4" />
+                            <AlertCircle className="w-4 h-4" 
+                            aria-label="Ícono decorativo de un círculo de altera"/>
                             {errors.descripcion}
                           </p>
                         )}
@@ -504,7 +526,8 @@ export default function JoinSection() {
                         />
                         {errors.productos && (
                           <p className="text-red-600 text-sm mt-1 flex items-center gap-1">
-                            <AlertCircle className="w-4 h-4" />
+                            <AlertCircle className="w-4 h-4" 
+                            aria-label="Ícono decorativo de un círculo de altera"/>
                             {errors.productos}
                           </p>
                         )}

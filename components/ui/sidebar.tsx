@@ -278,7 +278,7 @@ const SidebarTrigger = React.forwardRef<
       }}
       {...props}
     >
-      <PanelLeft />
+      <PanelLeft aria-label="Icono que permite alternar barra lateral" role="img" />
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
   )

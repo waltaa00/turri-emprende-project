@@ -42,7 +42,10 @@ export default function Hero({ onLearnMoreClick }: HeroProps) {
           className={`text-center transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6">
-            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-300" />
+            <Sparkles 
+              className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-300" 
+              aria-label="Ícono decorativo de chispas que acompaña el texto Emprende en la pantalla de Inicio"
+            />
             <span className="text-xs sm:text-sm font-medium">Emprendimientos de Turrialba</span>
           </div>
 

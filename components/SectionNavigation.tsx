@@ -232,7 +232,8 @@ export default function SectionNavigation() {
                       className={`w-5 h-5 transition-transform duration-200 ${
                         isActive ? "scale-110" : "group-hover:scale-110"
                       }`}
-                      aria-hidden="true"
+                      aria-label={`${section.label}: ${section.ariaLabel}`}
+                      role="img"
                     />
                   )}
 

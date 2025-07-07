@@ -39,7 +39,7 @@ export default function BottomNavigation() {
               aria-current={isActive ? "page" : undefined}
               aria-label={link.label}
             >
-              <link.icon className="w-6 h-6" aria-hidden="true" />
+              <link.icon className="w-6 h-6" aria-label={`Ícono de ${link.label.toLowerCase()}`} role="img" />
               <span className="text-xs mt-1">{link.label}</span>
             </Link>
           )

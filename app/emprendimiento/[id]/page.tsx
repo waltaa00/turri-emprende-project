@@ -1,13 +1,6 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { notFound } from "next/navigation"
-import EmprendimientoDetail from "@/components/EmprendimientoDetail"
-import BottomNavigation from "@/components/BottomNavigation"
-import Footer from "@/components/Footer"
-import { obtenerEmprendimientoPorId, type Emprendimiento } from "@/lib/data-manager"
-import SectionNavigation from "@/components/SectionNavigation"
-import BackToTopButton from "@/components/BackToTopButton"
+import { Metadata } from "next"
+import { obtenerEmprendimientoPorId } from "@/lib/data-manager"
+import EmprendimientoPageClient from "@/components/EmprendimientoPageClient"
 
 interface Props {
   params: {
@@ -15,68 +8,70 @@ interface Props {
   }
 }
 
-export default function EmprendimientoPage({ params }: Props) {
-  const [emprendimiento, setEmprendimiento] = useState<Emprendimiento | null>(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const cargarEmprendimiento = async () => {
-      try {
-        setLoading(true)
-        // Simular delay de carga
-        await new Promise((resolve) => setTimeout(resolve, 300))
-        const data = obtenerEmprendimientoPorId(params.id)
-        setEmprendimiento(data)
-      } catch (error) {
-        console.error("Error al cargar emprendimiento:", error)
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    cargarEmprendimiento()
-  }, [params.id])
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex flex-col">
-        <main id="main-content" className="flex-1 pb-20">
-          <div className="max-w-7xl mx-auto px-4 py-16">
-            <div className="animate-pulse">
-              <div className="h-8 bg-gray-200 rounded w-1/4 mb-6"></div>
-              <div className="h-64 bg-gray-200 rounded mb-8"></div>
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 space-y-6">
-                  <div className="h-32 bg-gray-200 rounded"></div>
-                  <div className="h-48 bg-gray-200 rounded"></div>
-                </div>
-                <div className="space-y-6">
-                  <div className="h-48 bg-gray-200 rounded"></div>
-                  <div className="h-32 bg-gray-200 rounded"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </main>
-        <Footer />
-        <BottomNavigation />
-      </div>
-    )
-  }
+// Generar metadatos dinámicamente para cada emprendimiento
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const emprendimiento = obtenerEmprendimientoPorId(params.id)
 
   if (!emprendimiento) {
-    notFound()
+    return {
+      title: "Emprendimiento no encontrado | TurriEmprende",
+      description: "El emprendimiento que buscas no existe o ha sido removido.",
+    }
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50 flex flex-col">
-      <main id="main-content" className="flex-1 pb-20">
-        <EmprendimientoDetail emprendimiento={emprendimiento} />
-      </main>
-      <Footer />
-      <BottomNavigation />
-      <SectionNavigation />
-      <BackToTopButton />
-    </div>
-  )
+  const title = `${emprendimiento.nombre} | TurriEmprende`
+  const description = emprendimiento.descripcion.length > 160 
+    ? emprendimiento.descripcion.substring(0, 157) + "..."
+    : emprendimiento.descripcion
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      url: `https://turriemprende.cr/emprendimiento/${params.id}`,
+      siteName: "TurriEmprende",
+      images: [
+        {
+          url: emprendimiento.imagen.url,
+          width: 1200,
+          height: 630,
+          alt: emprendimiento.imagen.alt,
+        },
+      ],
+      locale: "es_CR",
+      type: "article",
+      authors: [emprendimiento.nombre_contacto],
+      publishedTime: emprendimiento.fecha_creacion,
+      modifiedTime: emprendimiento.fecha_actualizacion,
+      section: emprendimiento.categoria,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [emprendimiento.imagen.url],
+      creator: "@TurriEmprende",
+      site: "@TurriEmprende",
+    },
+    alternates: {
+      canonical: `https://turriemprende.cr/emprendimiento/${params.id}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  }
+}
+
+export default function EmprendimientoPage({ params }: Props) {
+  return <EmprendimientoPageClient id={params.id} />
 }

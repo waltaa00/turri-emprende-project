@@ -80,7 +80,7 @@ export default function BackToTopButton() {
       aria-label="Volver al inicio de la página"
       title="Volver arriba"
     >
-      <ArrowUp className={`${isMobile ? "w-4 h-4" : "w-5 h-5"}`} aria-hidden="true" />
+      <ArrowUp className={`${isMobile ? "w-4 h-4" : "w-5 h-5"}`} aria-label="Flecha hacia arriba" role="img" />
     </Button>
   )
 }

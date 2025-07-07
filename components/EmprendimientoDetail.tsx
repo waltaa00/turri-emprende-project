@@ -35,7 +35,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
           className="inline-flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100"
         >
           <Link href="/catalogo">
-            <ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4" aria-label="Flecha hacia la izquierda" role="img" />
             Volver al Catálogo
           </Link>
         </Button>
@@ -77,7 +77,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
           >
             <header className="p-6 pb-0">
               <h2 id="historia-heading" className="flex items-center gap-2 text-2xl text-gray-900 font-bold">
-                <Star className="w-6 h-6 text-teal-600" />
+                <Star className="w-6 h-6 text-teal-600" aria-label="Ícono de estrella que representa nuestra historia" role="img" />
                 Nuestra Historia
               </h2>
             </header>
@@ -113,7 +113,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
                 <ul className="space-y-3">
                   {emprendimiento.productos.map((producto, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full flex-shrink-0" aria-hidden="true" />
+                      <span className="w-2 h-2 bg-teal-600 rounded-full flex-shrink-0" aria-label="Punto decorativo" role="presentation" />
                       <span className="text-gray-700">{producto}</span>
                     </li>
                   ))}
@@ -132,7 +132,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
                 <ul className="space-y-3">
                   {emprendimiento.servicios.map((servicio, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <span className="w-2 h-2 bg-teal-600 rounded-full flex-shrink-0" aria-hidden="true" />
+                      <span className="w-2 h-2 bg-teal-600 rounded-full flex-shrink-0" aria-label="Punto decorativo" role="presentation" />
                       <span className="text-gray-700">{servicio}</span>
                     </li>
                   ))}
@@ -155,12 +155,12 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
             </header>
             <div className="p-6 space-y-4">
               <address className="flex items-center gap-3 not-italic">
-                <MapPin className="w-5 h-5 text-teal-600 flex-shrink-0" aria-hidden="true" />
+                <MapPin className="w-5 h-5 text-teal-600 flex-shrink-0" aria-label="Ícono de ubicación" role="img" />
                 <span className="text-gray-700">{emprendimiento.ubicacion}</span>
               </address>
 
               <address className="flex items-center gap-3 not-italic">
-                <Phone className="w-5 h-5 text-teal-600 flex-shrink-0" aria-hidden="true" />
+                <Phone className="w-5 h-5 text-teal-600 flex-shrink-0" aria-label="Ícono de teléfono" role="img" />
                 <a
                   href={`tel:${emprendimiento.telefono}`}
                   className="text-gray-700 hover:text-teal-600 transition-colors"
@@ -182,7 +182,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
                           rel="noopener noreferrer"
                           aria-label="Síguenos en Instagram"
                         >
-                          <Instagram className="w-4 h-4" />
+                          <Instagram className="w-4 h-4" aria-label="Logo de Instagram" role="img" />
                         </a>
                       </Button>
                     </li>
@@ -196,7 +196,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
                           rel="noopener noreferrer"
                           aria-label="Síguenos en Facebook"
                         >
-                          <Facebook className="w-4 h-4" />
+                          <Facebook className="w-4 h-4" aria-label="Logo de Facebook" role="img" />
                         </a>
                       </Button>
                     </li>
@@ -210,7 +210,7 @@ export default function EmprendimientoDetail({ emprendimiento }: Props) {
                           rel="noopener noreferrer"
                           aria-label="Contáctanos por WhatsApp"
                         >
-                          <MessageCircle className="w-4 h-4" />
+                          <MessageCircle className="w-4 h-4" aria-label="Logo de WhatsApp" role="img" />
                         </a>
                       </Button>
                     </li>

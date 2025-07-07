@@ -56,7 +56,7 @@ function BackButtonContent({ defaultPath = "/", className = "" }: BackButtonProp
       className={`flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100 ${className}`}
       aria-label={getBackLabel()}
     >
-      <ArrowLeft className="w-4 h-4" />
+      <ArrowLeft className="w-4 h-4" aria-label="Flecha hacia la izquierda" role="img" />
       {getBackLabel()}
     </Button>
   )
@@ -68,8 +68,9 @@ export default function BackButton(props: BackButtonProps) {
       <Button 
         variant="ghost" 
         className={`flex items-center gap-2 bg-teal-50 text-teal-600 hover:bg-white hover:text-gray-700 shadow-sm border border-teal-200 hover:border-gray-100 ${props.className}`}
+        aria-label="Volver"
       >
-        <ArrowLeft className="w-4 h-4" />
+        <ArrowLeft className="w-4 h-4" aria-label="Flecha hacia la izquierda" role="img" />
         Volver
       </Button>
     }>
