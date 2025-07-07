@@ -85,7 +85,11 @@ const AboutSection = forwardRef<HTMLElement>((props, ref) => {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-2xl mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                <feature.icon className="w-6 h-6 sm:w-8 sm:h-8" aria-hidden="true" />
+                <feature.icon 
+                  className="w-6 h-6 sm:w-8 sm:h-8" 
+                  aria-label={`Ícono de ${feature.title.toLowerCase()}: ${feature.description} que acompaña el texto de ${feature.title}`}
+                  role="img"
+                />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">{feature.title}</h3>
               <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
