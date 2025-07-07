@@ -28,7 +28,7 @@ export default function Header() {
             <Image
               className="h-8 w-auto drop-shadow-md transition-all duration-300 hover:drop-shadow-xl"
               src="/logoTurriEmprende2.png"
-              alt="Logo TurriEmprende"
+              alt="Logo de TurriEmprende: Muestra la silueta de un volcán integrado con una red que simboliza el emprendimiento en la comunidad de Turrialba."
               width={32}
               height={32}
               priority

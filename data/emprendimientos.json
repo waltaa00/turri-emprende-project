@@ -6,25 +6,25 @@
       "descripcion": "Queso artesanal hecho en Santa Cruz",
       "categoria": "Lácteos",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437413/LaColina1_qf9hod.png",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/LaColina1_urgfhz.webp",
         "alt": "La imagen muestra un sandwich hecho con queso semiduro de La Colina, lechuga, tomate y pan cuadrado"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437413/LaColina4_mzqivc.png",
-          "alt": "Fotografía de un queso con especies de La Colina, mostrado de frente y dejando ver el interior"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/LaColina4_izlobj.webp",
+          "alt": "Fotografía de un queso con especies de La Colina, mostrado de frente y dejando ver el costado"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina3_t9wvrm.png",
-          "alt": "Forografía de un queso Gouda maduro, mostrado de frente y dejando ver el interior"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/LaColina3_yfse21.webp",
+          "alt": "Fotografía de un queso Gouda maduro, mostrado de frente y dejando ver el interior"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina2_biojdx.png",
-          "alt": "Forografía de un queso Semiduro, mostrado de frente y dejando ver el interior"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/LaColina2_npdvql.webp",
+          "alt": "Fotografía de un queso Semiduro, mostrado de frente y dejando ver el interior"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750437412/LaColina5_qu8taf.png",
-          "alt": "Forografía de un queso mozzarella, mostrado de frente y dejando ver el interior"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/LaColina5_k5avtr.webp",
+          "alt": "Fotografía de un queso mozzarella, mostrado de frente y dejando ver el queso completo. Este queso tiene una forma circular."
         }
       ],
       "historia": "Fundado en el 2024 por un joven turrialbeño, quien decidió comenzar a vender quesos hechos artesanalmente en Santa Cruz de Turrialba. Actualmente, venden quesos en San José y Turrialba.",
@@ -55,20 +55,20 @@
       "descripcion": "Venta de artículos de bisutería y accesorios",
       "categoria": "Accesorios",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439557/IMG_7391_qz8qcy.jpg",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/Kanel1_i2h4yv.webp",
         "alt": "La imagen muestra una pulsera color dorada posada sobre un mostrador color blanco"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439558/IMG_7393_u86dqr.jpg",
-          "alt": "La imagen muestra una pulsera dorada con un dise;o creativo y perlas incrustadas. Esta pulsera está sobre una superficie color café"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908614/Kanel3_jrbwir.webp",
+          "alt": "La imagen muestra una pulsera dorada con un diseño creativo y perlas incrustadas. Esta pulsera está sobre una superficie color café"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439558/IMG_7392_bduh3n.jpg",
-          "alt": "La imagen muestra dos collaeres color dorado, uno tiene un dije también dorado en forma de flor y el otro un dije de flor con fondo negro."
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908614/Kanel2_ikgfj7.webp",
+          "alt": "La imagen muestra dos collares color dorado, uno tiene un dije también dorado en forma de flor y el otro un dije de flor con fondo negro."
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750439557/IMG_7394_iee2rl.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908617/Kanel4_tjtaia.webp",
           "alt": "La imagen muestra un bolso de cuero color café con un diseño creativo y en un fondo color blanco"
         }
       ],
@@ -95,28 +95,28 @@
       "descripcion": "Servicio de fotografía y video",
       "categoria": "Servicios",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440461/IMG_7400_jbjvjn.jpg",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908613/Walta1_xa4etn.webp",
         "alt": "La imagen muestra un fotógrafo con una cámara en la mano, caminando hacia un hospedaje estilo cabaña"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440463/IMG_7402_yglraa.jpg",
-          "alt": "La imagen muestra una fotografía con dron de un hospedaje estilo modeerno, con pasto artificial y una piscina en el centro."
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908606/Walta4_be1ldw.webp",
+          "alt": "La imagen muestra una fotografía con dron de un hospedaje estilo moderno, con pasto artificial y una piscina en el centro."
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440462/IMG_7396_rhghcs.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908609/Walta2_njb5it.webp",
           "alt": "La imagen muestra un fotógrafo tomándole una fotografía al famoso influencer Choché Romano en la inauguración de una tienda de artículos de panadería."
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440462/IMG_7401_odinsp.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908606/Walta3_nsmxjm.webp",
           "alt": "La imagen muestra una fotografía de un chef cocinando un chorizo asado sobre una parrilla durante una degustación"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440461/IMG_7399_qfovkc.jpg",
-          "alt": "La imagen muestra una fotografía de un creador de video grabanzo a un atelta mientras realiza crossfit. Se muestra una cámara sobre un estabilizador"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908613/Walta5_mogy9s.webp",
+          "alt": "La imagen muestra una fotografía de un creador de video grabando a un atelta mientras realiza Crossfit. Se muestra una cámara sobre un estabilizador"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750440460/IMG_7397_goyb69.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908614/Walta6_pgilgf.webp",
           "alt": "La imagen muestra una fotografía de una sucursal del ICE en Guanacaste, tomada con un dron aproximadamente a 10 metros de altua"
         }
       ],
@@ -141,25 +141,25 @@
       "descripcion": "Tacos de Birria y comida mexicana",
       "categoria": "Gastronomía",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441217/IMG_7403_ynaqei.jpg",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/Birrieria1_lv3x1b.webp",
         "alt": "La fotografía muestra un taco de birria con queso derretido, carne de birria y guarniciones, tomada desde cerca"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441217/IMG_7404_vjplqe.jpg",
-          "alt": "La imagen muestra una hamburguesa estilo mexicano con jalapeños y guacamole, acompañada de papas fritas"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/Birrieria2_m2t2rm.webp",
+          "alt": "La imagen muestra una hamburguesa de pollo estilo mexicano con jalapeños y guacamole, acompañada de papas fritas"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441216/IMG_7406_wwfxsv.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/Birrieria4_ivivv0.webp",
           "alt": "La imagen muestra una fotografía tomada desde arriba de un plato de papas fritas con trozos de pollo bañadas con una salsa de queso derretido"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441215/IMG_7405_ahyioi.jpg",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/Birrieria3_kptbns.webp",
           "alt": "La imagen muestra una burrito relleno de guacamole, queso derretido, carne de birria y papas fritas, tomada desde cerca"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441215/IMG_7407_ypz8sb.jpg",
-          "alt": "La imagen muestra una fotografía de un burripizza, que es un burrito que contiene queso derretido, carne de birria , una cubierta de peperoni y papas fritas"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/Birrieria5_evcrk4.webp",
+          "alt": "La imagen muestra una fotografía de un burripizza, que es un burrito que contiene queso derretido, carne de birria, una cubierta de peperoni y papas fritas"
         }
       ],
       "historia": "Fundado en el 2021 como resultado de la pandemia, La Birriería comenzó vendiendo solamente Tacos de Birria. Actualmente, ofrece una gran variedad de platos inspirados en la cocina mexicana pero con un toque único.",
@@ -191,20 +191,20 @@
       "descripcion": "Marca de ropa",
       "categoria": "Ropa",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441839/authr1_tpolif.png",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/authr1_kpglit.webp",
         "alt": "La imagen muestra un modelo vistiendo un hoodie color negro con un diseño creativo y un logo bordado en el pecho que muestra la marca Authr. Detrás del modelo hay letras color blanco con brillo neón que dice Authr"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441840/auth2_gaosn4.png",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/auth2_vkkraj.webp",
           "alt": "La imagen muestra un modelo vistiendo un hoodie color negro en un fondo blanco, en la imagen también hay plantas al rededor y el modelo se encuentra sentado"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441841/auth4_omqewd.png",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/auth4_on1jv3.webp",
           "alt": "La imagen muestra una hoodie color negro puesta sobre un soporte de madera. La imagen además muestra flechas con texto que indican características del hoodie."
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750441841/auth3_ze1hyp.png",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/auth3_gcjmox.webp",
           "alt": "La imagen muestra una modelo vistiendo un hoodie color gris claro, se muestra como si estuviera tomándose una fotografía con su celular"
         }
       ],
@@ -229,20 +229,20 @@
       "descripcion": "Venta de queques y repostería",
       "categoria": "Gastronomía",
       "imagen": {
-        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442610/dolce1_fch7h1.png",
+        "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908605/dolce1_cnkfib.webp",
         "alt": "La imagen muestra una torta fría tipo Carlotta, hecha con una base de vainilla, cubierta con chocolate y fresas"
       },
       "galeria": [
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442609/dolce2_tgnujx.png",
-          "alt": "La imagen muestra una torta fría tipo Calotta, con base de vainilla, hecha con almendras y cerezas para decoración"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/dolce2_vbiwpc.webp",
+          "alt": "La imagen muestra una torta fría tipo Carlotta, con base de vainilla, hecha con almendras y cerezas para decoración"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442607/dolce3_tbfasd.png",
-          "alt": "La imagen muestra una forografía de un rollo de pizza en un molde de metal color negro, la fotografía estpa tomada de cerca y se muestran todos los detalles del rollo de pizza"
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/dolce3_ssgltz.webp",
+          "alt": "La imagen muestra una fotografía de un rollo de pizza en un molde de metal color negro, la fotografía está tomada de cerca y se muestran todos los detalles del rollo de pizza"
         },
         {
-          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1750442317/dolce4_sqyukt.png",
+          "url": "https://res.cloudinary.com/dgcrjewoy/image/upload/v1751908604/dolce4_aj4fpe.webp",
           "alt": "La imagen muestra una porción de torta chilena, puesta sobre un empaque transparente. La torta chilena está decorada con confites de colores encima."
         }
       ],
